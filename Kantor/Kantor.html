@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Kantor" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Kantor.css">
+    <title>Kantor</title>
+</head>
+<body>
+    <fieldset>
+    <legend>KANTOR WALUT</legend>
+    Kwota*:
+    <input type="number" calss="choose_currency"/>
+    <select class="currency">
+        <option>PLN</option>
+        <option>USD</option>
+        <option>GBP</option>
+        <option>EUR</option>
+        <option>CHF</option>
+    </select>
+    <p>* - pole wymagane</p><br>
+    <p>Wybierz walutę docelową:</p><br>
+    <form>
+        <label div id="select_currency">
+            <input type="radio" name="option" value="PLN" required>
+            PLN
+        </label><br>
+        <label>
+            <input type="radio" name="option" value="USD">
+            USD
+        </label><br>
+        <label>
+            <input type="radio" name="option" value="GBP">
+            GBP
+        </label><br>
+        <label>
+            <input type="radio" name="option" value="EUR">
+            EUR
+        </label><br>
+        <label>
+            <input type="radio" name="option" value="CHF">
+            CHF
+        </label><br>
+    </form>
+</fieldset>
+<button>Przelicz</button>
+</body>

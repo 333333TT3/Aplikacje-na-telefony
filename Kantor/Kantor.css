@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+}
+fieldset{
+    border-radius: 2%;
+    max-width: 40%;
+    max-height: 70%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+}
+button{
+    background-color: teal;
+    border-radius: 2%;
+    margin-top: 5%;
+}
+legend{
+    color: teal;
+    font-size: xx-large;
+}
