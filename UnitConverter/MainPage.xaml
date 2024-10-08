@@ -1,0 +1,55 @@
+﻿<ContentPage
+    x:Class="UnitConverterApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout Padding="30" VerticalOptions="Center">
+        <Label
+            FontSize="30"
+            HorizontalOptions="Center"
+            Text="Measurement Converter" />
+
+        <Entry
+            x:Name="InputValue"
+            HorizontalOptions="FillAndExpand"
+            Keyboard="Numeric"
+            Placeholder="Enter value" />
+
+        <Picker
+            x:Name="FromUnitPicker"
+            Title="From Unit"
+            SelectedIndex="0">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>mm</x:String>
+                    <x:String>cm</x:String>
+                    <x:String>m</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker
+            x:Name="ToUnitPicker"
+            Title="To Unit"
+            SelectedIndex="1">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>mm</x:String>
+                    <x:String>cm</x:String>
+                    <x:String>m</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+            Clicked="OnConvertClicked"
+            HorizontalOptions="Center"
+            Text="Convert" />
+
+        <Label
+            x:Name="ResultLabel"
+            FontSize="20"
+            HorizontalOptions="Center"
+            TextColor="Black" />
+    </StackLayout>
+</ContentPage>
