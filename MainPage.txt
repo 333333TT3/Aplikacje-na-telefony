@@ -1,0 +1,34 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FahrenheitConverter.MainPage"
+             xmlns:local="clr-namespace:FahrenheitConverter"
+             Title="Fahrenheit Converter">
+
+    <ContentPage.BindingContext>
+        <local:TemperatureConverterViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20" Spacing="20">
+
+        <!-- Picker to select temperature unit -->
+        <Picker Title="Select Unit"
+                ItemsSource="{Binding Units}"
+                SelectedItem="{Binding SelectedUnit}" />
+
+        <!-- Entry to input temperature -->
+        <Entry Placeholder="Enter Temperature"
+               Keyboard="Numeric"
+               Text="{Binding InputTemperature}" />
+
+        <!-- Button to trigger conversion -->
+        <Button Text="Convert"
+                Clicked="OnConvertClicked" />
+
+        <!-- Label to display converted temperature -->
+        <Label Text="{Binding ConvertedTemperature, StringFormat='Converted Temperature: {0:F2}'}"
+               FontSize="Large" />
+
+    </StackLayout>
+</ContentPage>
+
+nazwa MainPage.xaml

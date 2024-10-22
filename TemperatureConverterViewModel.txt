@@ -1,0 +1,26 @@
+namespace FahrenheitConverter
+{
+    public class TemperatureConverterViewModel
+    {
+        public string SelectedUnit { get; set; } // Wybrana jednostka (Fahrenheit lub Celsius)
+        public double InputTemperature { get; set; } // Wprowadzona przez użytkownika temperatura
+        public double ConvertedTemperature { get; private set; } // Przeliczona temperatura
+
+        // Lista dostępnych jednostek
+        public string[] Units { get; } = { "Fahrenheit", "Celsius" };
+
+        // Metoda do konwersji temperatury
+        public void ConvertTemperature()
+        {
+            if (SelectedUnit == "Fahrenheit")
+            {
+                ConvertedTemperature = (InputTemperature - 32) * 5 / 9; // Przelicz z Fahrenheit na Celsius
+            }
+            else if (SelectedUnit == "Celsius")
+            {
+                ConvertedTemperature = (InputTemperature * 9 / 5) + 32; // Przelicz z Celsius na Fahrenheit
+            }
+        }
+    }
+}
+nazwa TemperatureConverterViewModel.cs
