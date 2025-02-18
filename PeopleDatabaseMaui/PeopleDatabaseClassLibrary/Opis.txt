@@ -3,3 +3,6 @@
 2.Kasujemy plik Class1.cs
 
 3.Instalacja bibliotek 
+
+<PackageReference Include="Microsoft.EntityFrameworkCore"
+<PackageReference Include="Pomelo.EntityFrameworkCore.MySql"
